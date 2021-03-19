@@ -33,7 +33,8 @@ def addUser(request):
     if(serializer.is_valid()):
         serializer.save()
 
-    return Response(serializer.data)
+    print(serializer.errors)
+    return Response(request.data)
 
 @api_view(['POST'])
 def updateUser(request,pk):

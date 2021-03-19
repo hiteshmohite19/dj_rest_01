@@ -20,7 +20,7 @@ from . import views
 urlpatterns = [
     path('', views.api_list,name='api_list'),
     path('users', views.users,name='users'),
-    path('add_user', views.addUser,name='add_user'),
-    path('update_user', views.updateUser,name='update_user'),
-    path('delete_user', views.deleteUser,name='delete_user'),
+    path('addUser', views.addUser,name='addUser'),
+    path('updateUser/<int:id>', views.updateUser,name='updateUser'),
+    path('deleteUser/<int:id>', views.deleteUser,name='deleteUser'),
 ]
